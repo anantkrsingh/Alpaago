@@ -55,11 +55,9 @@ const LogIn = () => {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content lg:flex flex-col-reverse lg:flex-row-reverse">
-        <div className="text-center lg:w-1/2 mx-auto">
-          <Lottie animationData={img} className="p-5" />
-        </div>
-        <div className=" shrink-0 w-full mx-auto max-w-sm shadow-2xl bg-base-100 lg:rounded-lg">
-          <form onSubmit={handleLogIn} className="card-body">
+
+        <div className=" shrink-0 w-full mx-auto max-w-sm shadow-2xl bg-base-100 lg:rounded-lg ">
+          <form onSubmit={handleLogIn} className="card-body mx-10">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -94,9 +92,9 @@ const LogIn = () => {
             </div>
           </form>
           <div className="text-center">
-            <p className="pb-3">Or Log In with</p>
+            <p className="pb-3">or Login using</p>
             <div className="pb-10 ">
-              <button onClick={handleGoogleLogIn} className="flex hover:bg-sky-200 justify-center items-center gap-2 p-2 w-3/4 mx-auto border-2 border-primary rounded-full">
+              <button onClick={handleGoogleLogIn} className="flex hover:bg-white hover:text-black transition-all hover:rounded-md justify-center items-center gap-2 p-2 w-3/4 mx-auto border-2 border-primary rounded-full">
                 <img
                   className="w-6 h-6"
                   src="https://i.ibb.co/Lpmm2m5/Google-G-logo-svg-1.webp"
@@ -106,12 +104,12 @@ const LogIn = () => {
               </button>
               <div className="pt-3">
                 <p>
-                  New to report safe? please{" "}
+                  New Here {" "}
                   <Link
                     to={"/register"}
                     className="underline font-bold text-primary"
                   >
-                    Register
+                    Register now
                   </Link>
                 </p>
               </div>

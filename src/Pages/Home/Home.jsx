@@ -10,13 +10,12 @@ const api = {
 const Home = () => {
   const [weather, setWeather] = useState([]);
   const [search, setSearch] = useState('');
-  console.log(weather);
 
   return (
     <div>
       <NavBar />
       <Banner setWeather={setWeather} search={search} setSearch={setSearch}/>
-      <h2 className="">Home</h2>
+      {/* <h2 className="">Home</h2> */}
       {search.length || weather?.length > 0 ? (
         <>
           <h2 className="text-3xl font-bold text-center">

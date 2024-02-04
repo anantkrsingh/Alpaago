@@ -73,7 +73,7 @@ const NavBar = () => {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full navbar bg-sky-200 md:py-2 lg:py-3">
+        <div className="w-full navbar bg-black md:py-2 lg:py-3">
           <div className="flex-none lg:hidden z-20">
             <label
               htmlFor="my-drawer-3"
@@ -96,12 +96,7 @@ const NavBar = () => {
             </label>
           </div>
           <div className="flex-1 px-2 mx-2 gap-3">
-            <img
-              className="w-12 h-12 rounded-full"
-              src="https://png.pngtree.com/png-vector/20230320/ourmid/pngtree-wolf-animals-logo-design-vector-png-image_6656634.png"
-              alt=""
-            />
-            <h2 className="text-2xl md:text-4xl font-bold">ALPAAGO</h2>
+            
           </div>
           <div className="flex-none hidden lg:block">
             <ul className="menu menu-horizontal">{navLinks}</ul>
