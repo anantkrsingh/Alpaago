@@ -7,32 +7,32 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 const LogIn = () => {
 
-    const {login, googleLogin} = useContext(AuthContext);
-    const location = useLocation();
-    const navigate = useNavigate();
-    // const axiosPublic = useAxiosPublic();
+  const { login, googleLogin } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  // const axiosPublic = useAxiosPublic();
   const handleLogIn = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
     login(email, password)
-    .then(() => {
+      .then(() => {
         Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "Log In successfully",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-          navigate(location?.state ? location.state : '/')
-    })
+          position: "top-end",
+          icon: "success",
+          title: "Log In successfully",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        navigate(location?.state ? location.state : '/')
+      })
   };
   const handleGoogleLogIn = () => {
     googleLogin()
-    .then((res) => {
-        navigate(location?.state ? location.state : '/') 
-      console.log(res.user);
+      .then((res) => {
+        navigate(location?.state ? location.state : '/')
+        console.log(res.user);
         // const userInfo = {
         //   email: res.user?.email,
         //   name:res.user?.displayName,
@@ -50,13 +50,13 @@ const LogIn = () => {
         //   });
         //   navigate(location?.state ? location.state : '/') 
         // })
-    })
+      })
   }
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content lg:flex flex-col-reverse lg:flex-row-reverse">
         <div className="text-center lg:w-1/2 mx-auto">
-            <Lottie animationData={img} className="p-5"/>
+          <Lottie animationData={img} className="p-5" />
         </div>
         <div className=" shrink-0 w-full mx-auto max-w-sm shadow-2xl bg-base-100 lg:rounded-lg">
           <form onSubmit={handleLogIn} className="card-body">
